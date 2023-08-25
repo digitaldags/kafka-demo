@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Configuration
 @EnableKafka
-public class KafkaConfig {
+public class KafkaConsumerConfig {
 
     private final String bootstrapServers = "localhost:9092";
     private final String groupId = "test-group";
