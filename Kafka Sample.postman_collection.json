@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "4beccf54-42f6-488f-b7e0-3b9d3575b7ee",
+		"name": "Kafka Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3732079"
+	},
+	"item": [
+		{
+			"name": "Stop Consumer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/stop-consumer?consumerId=theConsumer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stop-consumer"
+					],
+					"query": [
+						{
+							"key": "consumerId",
+							"value": "theConsumer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Consumer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/start-consumer?consumerId=theConsumer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"start-consumer"
+					],
+					"query": [
+						{
+							"key": "consumerId",
+							"value": "theConsumer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"channel\": \"UBO\",\r\n    \"requestType\": \"EasyCash\",\r\n    \"cardNo\": \"Hk5mNwIyLP4zPIJHH+VipBm6VCQzq1LWOoTP3T/cxXc\",\r\n    \"amount\": \"9000\",\r\n    \"maximumEligibleAmount\": \"12000\",\r\n    \"monthsToPay\": \"12\",\r\n    \"interestRate\": \"0.23\",\r\n    \"monthlyPayment\": \"1900.5\",\r\n    \"monthlyRate\": \"1\",\r\n    \"shortCode\": \"INSTIPP114\",\r\n    \"merchantName\": \"cosmos\",\r\n    \"contactNo\": \"9002020000\",\r\n    \"email\": \"milestest@ubph.com\",\r\n    \"processingFee\": {\r\n      \"amount\": \"350\"\r\n    },\r\n    \"otherCards\": {\r\n      \"accountNo\": \"101270006467\",\r\n      \"disbursementMethod\": \"Internal\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
